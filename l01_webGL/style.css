@@ -1,0 +1,35 @@
+body{
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+
+}
+
+#suwak02b{
+	position: absolute;
+	top:0;
+	float: left;
+}
+
+#szescian{
+	position: absolute;
+	top: 0;
+	float: left;
+	
+}
+#walec{
+	position: absolute;
+	top: 0;
+	float: left;
+}
+#kula{
+	position: absolute;
+	top: 0;
+	float: left;
+}
+#stozek{
+	position: absolute;
+	top: 0;
+	float: left;
+}

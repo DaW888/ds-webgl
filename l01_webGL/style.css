@@ -15,21 +15,64 @@ body{
 #szescian{
 	position: absolute;
 	top: 0;
-	float: left;
-	
+	left: 0;
 }
 #walec{
 	position: absolute;
 	top: 0;
-	float: left;
+	left: 80px;
 }
-#kula{
+#sfera{
 	position: absolute;
 	top: 0;
-	float: left;
+	left: 150px;
 }
 #stozek{
 	position: absolute;
 	top: 0;
-	float: left;
+	left: 200px;
+}
+#btncw4{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#inputcw5{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#rangeXcw6, #rangeXcw8{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#rangeYcw6, #rangeYcw8{
+	position: absolute;
+	top: 40px;
+	left: 0;
+}
+#rangeZcw6, #rangeZcw8{
+	position: absolute;
+	top: 80px;
+	left: 0;
+}
+
+#btnCw7, #selectCw9{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#startCw9{
+	position: absolute;
+	top: 0;
+	left: 60px;
+}
+#stopCw9{
+	position: absolute;
+	top: 0;
+	left: 120px;
 }

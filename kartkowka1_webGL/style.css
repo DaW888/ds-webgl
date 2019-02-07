@@ -1,0 +1,21 @@
+body{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+#r1{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#r2{
+	position: absolute;
+	top: 80px;
+	left: 0;
+}
+#r3{
+	position: absolute;
+	top: 160px;
+	left: 0;
+}

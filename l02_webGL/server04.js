@@ -25,12 +25,12 @@ $(document).ready(function(){
 		opacity: 0.8,
 		})
 	var materials = []
-	materials.push(new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: new THREE.TextureLoader().load('blocks/textura.jpg') }));
-	materials.push(new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: new THREE.TextureLoader().load('blocks/textura2.jpg') }));
-	materials.push(new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: new THREE.TextureLoader().load('blocks/textura3.jpg') })); 
-	materials.push(new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: new THREE.TextureLoader().load('blocks/textura4.jpg') })); 
-	materials.push(new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: new THREE.TextureLoader().load('blocks/textura.jpg') })); 
-	materials.push(new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: new THREE.TextureLoader().load('blocks/textura2.jpg') })); 
+	materials.push(new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: new THREE.TextureLoader().load('blocks2/side.png') }));
+	materials.push(new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: new THREE.TextureLoader().load('blocks2/side.png') }));
+	materials.push(new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: new THREE.TextureLoader().load('blocks2/top.png') })); 
+	materials.push(new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: new THREE.TextureLoader().load('blocks2/bottom.png') })); 
+	materials.push(new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: new THREE.TextureLoader().load('blocks2/side.png') })); 
+	materials.push(new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: new THREE.TextureLoader().load('blocks2/side.png') })); 
 
 	var geometry = new THREE.BoxGeometry(70, 70, 70);
 	var cube = new THREE.Mesh(geometry, materials);

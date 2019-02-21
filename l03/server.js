@@ -104,9 +104,9 @@ $(document).ready(function(){
 	// })
 	// console.log(light)
 	// scene.add(light.getLight())
-	
-	$("#add").click(()=>{
-
+	var l=0
+	$("#add").click( function(){
+	l ++
 		var light = new Light({
 			color: 0xffffff,
 			strong: 1,
@@ -156,42 +156,42 @@ $(document).ready(function(){
 			light.container.children[1].material.color = color
 		}).appendTo(box)
 
-		$("<input>",{ type: "range", name: "x", min: -300, max: 500, class: "PosX", value: 0}).css("width", "30%").appendTo(box)
-		$("<input>",{ type: "range", name: "y", min: 0,    max: 500, class: "PosY", value: 80 }).css("width", "30%").appendTo(box)
-		$("<input>",{ type: "range", name: "z", min: -300, max: 500, class: "PosZ", value: 0 }).css("width", "30%").appendTo(box)
-		$("<input>",{ type: "range", name: "angle", min: 0, step: 0.05, max: Math.PI, value: 0.3, class: "angle" }).appendTo(box)
-		$("<input>",{ type: "range", name: "distance", value: 700, min: 1, max: 2000, class: "distance" }).appendTo(box)
-		$("<input>",{ type: "range", name: "strong", min: 0, max: 10, step: 0.1, value: 1, class: "strong" }).appendTo(box)
-		$("<input>",{ type: "range", name: "scattering", min: 0, max: 1, step: 0.05, value: 0.2, class: "scattering" }).appendTo(box)
+		$("<input>",{ id: "posX"+l,type: "range", name: "x", min: -300, max: 500, class: "PosX", value: 0}).css("width", "30%").appendTo(box)
+		$("<input>",{ id: "posY"+l,type: "range", name: "y", min: 0,    max: 500, class: "PosY", value: 80 }).css("width", "30%").appendTo(box)
+		$("<input>",{ id: "posZ"+l,type: "range", name: "z", min: -300, max: 500, class: "PosZ", value: 0 }).css("width", "30%").appendTo(box)
+		$("<input>",{ id: "angle"+l,type: "range", name: "angle", min: 0, step: 0.05, max: Math.PI, value: 0.3, class: "angle" }).appendTo(box)
+		$("<input>",{ id: "dinstance"+l,type: "range", name: "distance", value: 700, min: 1, max: 2000, class: "distance" }).appendTo(box)
+		$("<input>",{ id: "strong"+l,type: "range", name: "strong", min: 0, max: 10, step: 0.1, value: 1, class: "strong" }).appendTo(box)
+		$("<input>",{ id: "scattering"+l,type: "range", name: "scattering", min: 0, max: 1, step: 0.05, value: 0.2, class: "scattering" }).appendTo(box)
 		box.appendTo("#controls")
 
 
-		$(".PosX").on("input", function () {
+		$("#posX"+l).on("input", function () {
 			light.container.children[0].position.x = $(this).val()
 			light.container.children[1].position.x = $(this).val()
 		})
-		$(".PosY").on("input", function () {
+		$("#posY"+l).on("input", function () {
 			light.container.children[0].position.y = $(this).val()
 			light.container.children[1].position.y = $(this).val()
 		})
-		$(".PosZ").on("input", function () {
+		$("#posZ"+l).on("input", function () {
 			light.container.children[0].position.z = $(this).val()
 			light.container.children[1].position.z = $(this).val()
 		})
-		$(".angle").on("input", function () {
+		$("#angle"+l).on("input", function () {
 			light.container.children[0].angle = $(this).val()
 			light.container.children[1].scale.x = $(this).val()*2
 			light.container.children[1].scale.y = $(this).val()*2
 			light.container.children[1].scale.z = $(this).val()*2
 		})
-		$(".distance").on("input", function () {
+		$("#dinstance"+l).on("input", function () {
 			light.container.children[0].distance = $(this).val()
 		})
 
-		$(".strong").on("input", function () {
+		$("#strong"+l).on("input", function () {
 			light.container.children[0].decay = $(this).val()
 		})
-		$(".scattering").on("input", function () {
+		$("#scattering"+l).on("input", function () {
 			light.container.children[0].penumbra = $(this).val()
 		})
 		

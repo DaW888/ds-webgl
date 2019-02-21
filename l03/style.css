@@ -24,13 +24,15 @@ body{
 	width: 25vw;
 	height: 100vh;
 	opacity: 0.1;
+	overflow: auto;
+	overflow-x: hidden;
 }
 
 .oneControl{
 	border: 1px solid black;
 	position: relative;
 	width: 100%;
-	height: 12vw;
+	height: 10vw;
 	background-color: rgba(87, 87, 151, 0.486);
 }
 #controls:hover{

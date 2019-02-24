@@ -57,14 +57,34 @@ $(document).ready(function(){
 				id: e.name,
 				html: e.name,
 			}).click(()=>{
-				console.log('macu')
+				mixer.stopAllAction()
+				mixer.uncacheAction()
+				mixer.clipAction(e.name).play()
 			}).appendTo($("#controls"))
 		})
 
 		mixer = new THREE.AnimationMixer(meshModel)
-		mixer.clipAction("painc").play()
 
-		
+		container = new THREE.Object3D();
+		var ilosc = 1
+		$("#add").click(()=>{
+			ilosc++
+			for(var i = 0; i < ilosc; i++){
+				for(var j = 0; j < ilosc; j++){
+					var clone = meshModel.clone()
+					container.add(clone)
+					console.log(container)
+					container.children[i+j].position.x = 100*i
+					container.children[i+j].position.z = 100*j
+					scene.add(container)
+				}
+			}
+		})
+
+		$("#remove").click(()=>{
+			container.remove(container.children[0])
+			console.log(container)
+		})
 
 	});
 
